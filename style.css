@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #1c1c1e;
+  color: #f2f2f7;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #2c2c2e;
+  border-bottom: 1px solid #3a3a3c;
+  -webkit-app-region: drag;
+}
+
+#logo {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+#title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8e8e93;
+  letter-spacing: 0.5px;
+}
+
+#header-buttons {
+  display: flex;
+  gap: 6px;
+  -webkit-app-region: no-drag;
+}
+
+#header-buttons button {
+  background: #3a3a3c;
+  border: none;
+  border-radius: 6px;
+  color: #f2f2f7;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s;
+}
+
+#header-buttons button:hover {
+  background: #4a4a4c;
+}
+#close-btn:hover {
+  background: #ff453a !important;
+}
+#clear-btn:hover {
+  background: #ff9f0a !important;
+}
+
+#search-wrap {
+  padding: 12px;
+  background: #2c2c2e;
+  border-bottom: 1px solid #3a3a3c;
+}
+
+#search {
+  width: 100%;
+  padding: 8px 12px;
+  background: #3a3a3c;
+  border: none;
+  border-radius: 8px;
+  color: #f2f2f7;
+  font-size: 14px;
+  outline: none;
+}
+
+#search::placeholder {
+  color: #8e8e93;
+}
+
+#empty {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+  color: #8e8e93;
+  font-size: 14px;
+}
+
+#list {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.item {
+  padding: 10px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #2c2c2e;
+  font-size: 13px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: #f2f2f7;
+  transition: background 0.1s;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.item-text {
+  flex: 1;
+}
+
+.item:hover {
+  background: #2c2c2e;
+}
+
+.item .idx {
+  color: #8e8e93;
+  font-size: 11px;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+
+.item .delete-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: #8e8e93;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0 2px;
+  border-radius: 4px;
+  opacity: 0;
+  transition:
+    opacity 0.1s,
+    color 0.1s;
+  line-height: 1;
+}
+
+.item:hover .delete-btn {
+  opacity: 1;
+}
+.item .delete-btn:hover {
+  color: #ff453a;
+}
+
+.item.selected {
+  background: #0a84ff;
+  color: #fff;
+}
+
+.item.selected .idx {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.item.selected .delete-btn {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.item.selected .delete-btn:hover {
+  color: #fff;
+}

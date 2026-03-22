@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <img id="logo" src="clipstack_icon.svg" alt="logo" />
+      <span id="title">ClipStack</span>
+      <div id="header-buttons">
+        <button id="clear-btn" title="히스토리 초기화">🗑</button>
+        <button id="close-btn" title="닫기">✕</button>
+      </div>
+    </div>
+    <div id="search-wrap">
+      <input id="search" placeholder="🔍 검색..." autofocus />
+    </div>
+    <div id="empty">아직 복사한 내용이 없어요</div>
+    <div id="list"></div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
